@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka:1010/eureka/
   instance:
-    hostname: ${vcap.application.uris[0]}
+    hostname: apigateway-jaden-test.qyos.novalocal
     #hostname: apigateway-ng-jaden-test.qyos.novalocal
     instance-id: apigateway-jaden-test.qyos.novalocal
     prefer-ip-address: false  
