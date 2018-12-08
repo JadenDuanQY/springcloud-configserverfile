@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://local:1010/eureka/
+      defaultZone: http://localhost:1010/eureka/
   instance:
 #    hostname: apigateway-jaden-test.qyos.novalocal
 #    #hostname: apigateway-ng-jaden-test.qyos.novalocal
