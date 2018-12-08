@@ -1,0 +1,39 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://local:1010/eureka/
+  instance:
+#    hostname: apigateway-jaden-test.qyos.novalocal
+#    #hostname: apigateway-ng-jaden-test.qyos.novalocal
+#    instance-id: apigateway-jaden-test.qyos.novalocal
+#    prefer-ip-address: false
+#    nonSecurePort: 80
+    # home-page-url: http://${eureka.instance.hostname}
+    # status-page-url: http://${eureka.instance.hostname}/info
+    # health-check-url: http://${eureka.instance.hostname}/health
+server:
+  port: 1030
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+zuul:
+  add-host-header: true
+  # routes:
+  #   api-a-url:
+  #     path: /schedule/**
+  #     url: http://schedule.devops.paas/
+  #   feign-consumer:
+  #     sensitiveHeaders: ''
+  #   sensitive-headers: ''
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+
+#ribbon:
+#  ReadTimeout: 60000
+#  ConnectTimeout: 60000
